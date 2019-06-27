@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title style="text-align: center">Islamic App<ion-icon style="float: right" name="share"></ion-icon>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="wrapper">
+    <div>
+
+    </div>
+    <div class="child1">
+      <div class="timeline">
+        <div class="container right">
+          <Strong>{{formattedDate}}</Strong> <br>
+          <label> 22 Safar, 1438 AH</label>
+        </div>
+        <div class="container right">
+          <button class="btn dropdown-toggle" data-toggle="dropdown">Dhaka(+6:)
+            <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+          </ul>
+        </div>
+        <div class="container right">
+          <Strong>Notification  </Strong>
+          <ion-icon name="notifications"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div class="child2">
+      <div class="dot">
+        <p>{{formatTime}}</p>
+      </div>
+    </div>
+  </div>
+  <ion-content class="last" padding>
+    <div padding>
+      <ion-list *ngFor="let a of prayers">
+        <button style="border-radius: 10px;" ion-item color="light">
+          <p style="color: #6e8199;"><img src="{{a.image}}" alt="">{{a.name}} <br> {{a.subname}}</p>
+        </button>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-content>
